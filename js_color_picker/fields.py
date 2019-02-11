@@ -4,6 +4,7 @@ from django.core.checks import Error
 from django.core.exceptions import ValidationError
 from django.core.validators import RegexValidator
 from django.db.models import CharField
+from django.conf import settings
 
 from . import forms, widgets
 
@@ -14,8 +15,8 @@ class RGBColorField(CharField):
     default_validators = [RegexValidator(regex=forms.RGB_REGEX)]
 
     def __init__(self, *args, **kwargs):
-        self.colors = kwargs.pop('colors', None)
-        self.mode = kwargs.pop('mode', None)
+        self.colors = kwargs.pop('colors', getattr(settings, 'JS_COLOR_PICKET_COLORS', None))
+        self.mode = kwargs.pop('mode', getattr(settings, 'JS_COLOR_PICKET_MODE', None))
         kwargs['max_length'] = 7
         super(RGBColorField, self).__init__(*args, **kwargs)
 

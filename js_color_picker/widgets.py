@@ -4,7 +4,6 @@ import json
 
 from django.forms.widgets import TextInput
 from django.utils.safestring import mark_safe
-from django.conf import settings
 
 
 class ColorFieldWidget(TextInput):
@@ -18,7 +17,7 @@ class ColorFieldWidget(TextInput):
 
     def __init__(self, mode=None, colors=None, attrs=None):
         self.colors = colors or {}
-        self.mode = mode or getattr(settings, 'JS_COLOR_PICKET_MODE', 'both')
+        self.mode = mode or 'both'
         super(ColorFieldWidget, self).__init__(attrs)
 
     def render_colors(self):
@@ -28,8 +27,7 @@ class ColorFieldWidget(TextInput):
         parts = []
         if 'id' not in attrs:
             attrs['id'] = "id_%s" % name
-        if self.colors:
-            attrs['data-colors'] = self.render_colors()
+        attrs['data-colors'] = self.render_colors()
         if self.mode in ['choice', 'both']:
             attrs['class'] = 'color-picker'
             if self.mode == 'choice':

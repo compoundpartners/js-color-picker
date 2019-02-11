@@ -1,4 +1,7 @@
-###############
+Metadata-Version: 1.0
+Name: js-color-picker
+Version: 0.0.4
+Summary: ###############
 Jumpsuite Color Picker
 ###############
 
@@ -46,3 +49,10 @@ on browsers that don't support the HTML5 color input.
 
 
 
+
+Home-page: UNKNOWN
+Author: Compound Partners Ltd
+Author-email: hello@compoundpartners.co.uk
+License: UNKNOWN
+Description: UNKNOWN
+Platform: OS Independent

@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+js_color_picker/__init__.py
+js_color_picker/fields.py
+js_color_picker/forms.py
+js_color_picker/models.py
+js_color_picker/widgets.py
+js_color_picker.egg-info/PKG-INFO
+js_color_picker.egg-info/SOURCES.txt
+js_color_picker.egg-info/dependency_links.txt
+js_color_picker.egg-info/not-zip-safe
+js_color_picker.egg-info/top_level.txt
+js_color_picker/static/color-picker/color-picker.css
+js_color_picker/static/color-picker/color-picker.js
