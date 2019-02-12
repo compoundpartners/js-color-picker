@@ -11,7 +11,7 @@ class ColorFieldWidget(TextInput):
         css = {
             'all': ("color-picker/color-picker.css",)
         }
-        js = ("color-picker/color-picker.js",)
+        js = ("color-picker/color-picker2.js",)
 
     input_type = 'text'
 

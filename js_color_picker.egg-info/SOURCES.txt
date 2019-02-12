@@ -14,3 +14,4 @@ js_color_picker.egg-info/not-zip-safe
 js_color_picker.egg-info/top_level.txt
 js_color_picker/static/color-picker/color-picker.css
 js_color_picker/static/color-picker/color-picker.js
+js_color_picker/static/color-picker/color-picker2.js

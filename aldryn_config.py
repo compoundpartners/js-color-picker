@@ -21,7 +21,11 @@ class Form(forms.BaseForm):
     def to_settings(self, data, settings):
 
         if data['colors']:
-            settings['JS_COLOR_PICKET_COLORS'] = data['colors'].split(',')
+            import json
+            try:
+                settings['JS_COLOR_PICKET_COLORS'] = json.loads(data['colors'])
+            except:
+                pass
         if data['mode']:
             settings['JS_COLOR_PICKET_MODE'] = data['mode']
 

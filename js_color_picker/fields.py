@@ -49,7 +49,7 @@ class RGBColorField(CharField):
             else:
                 try:
                     if isinstance(self.colors, dict):
-                        for color, name in self.colors:
+                        for color, name in self.colors.items():
                             self.clean(color, None)
                     else:
                         self.colors, tmp = {}, self.colors
