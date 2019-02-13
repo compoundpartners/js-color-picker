@@ -36,7 +36,8 @@ JS_COLOR_PICKET_COLORS or keyword colors shold be list of colors,
 dics(keys are colors) or list of lists
 
 ::
-    JS_COLOR_PICKET_COLORS = ['#FF0000', '#FF0000', '#FF0000']
+
+    JS_COLOR_PICKET_COLORS = ['#FF0000', '#00FF00', '#0000FF']
 
 or
 
@@ -44,8 +45,8 @@ or
 
     JS_COLOR_PICKET_COLORS = {
         "#FF0000": "Color 1",
-        "#FF0000": "Color 2",
-        "#FF0000": "Color 3",
+        "#00FF00": "Color 2",
+        "#0000FF": "Color 3",
     }
 
 or
@@ -54,8 +55,8 @@ or
 
     JS_COLOR_PICKET_COLORS = [
         ["#FF0000", "Color 1"],
-        ["#FF0000", "Color 2"],
-        ["#FF0000", "Color 3"],
+        ["#00FF00", "Color 2"],
+        ["#0000FF", "Color 3"],
     ]
 
 
