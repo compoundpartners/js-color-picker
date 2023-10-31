@@ -9,9 +9,6 @@ jQuery(document).ready(function($){
             if(self.children('.color-picker').hasClass('add')){
                 self.addClass('add');
             }
-            if(self.children('.color-picker').hasClass('choice')){
-                self.addClass('choice');
-            }
             if(self.children('.color-picker').hasClass('cp-sm')){
 
                 self.addClass('cp-sm');
@@ -23,7 +20,6 @@ jQuery(document).ready(function($){
             }
 
             self.append('<ul></ul><input type="color" style="display:none;" />');
-            self.children('ul').append('<li class="clear" title="Remove">x</li>');
 
             var $foundactive = false;
 
@@ -71,7 +67,7 @@ jQuery(document).ready(function($){
 
         var self = $(this);
 
-          if (!self.hasClass('add_new') && !self.hasClass('clear')) {
+          if (!self.hasClass('add_new')) {
 
                   if (!self.hasClass('active')) {
 
@@ -93,13 +89,7 @@ jQuery(document).ready(function($){
 
                   }
           }else{
-              if (self.hasClass('add_new')){
-                self.parents('.color-picker-wrap').children("input[type='color']").trigger('click');
-              }
-              if (self.hasClass('clear')){
-                self.siblings().removeClass('active');
-                self.parents('.color-picker-wrap').children(".color-picker").val('');
-              }
+              self.parents('.color-picker-wrap').children("input[type='color']").trigger('click');
           }
 
       });
